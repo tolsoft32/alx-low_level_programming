@@ -1,2 +1,2 @@
 #!/bin/bash
-betty $CFILE -o CFILE.o
+betty $CFILE -o CFILE
