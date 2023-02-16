@@ -1,1 +1,1 @@
-Running my first c program 
+Running my first c programn terminal 
