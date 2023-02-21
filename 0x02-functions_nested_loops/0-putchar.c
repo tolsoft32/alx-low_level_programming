@@ -1,8 +1,10 @@
 #include "main.h"
 /**
- * main - putchar  Entry point
- * print alphabet - return (0) if program runs well
+ * main - Entry point
+ * _putchar print alphabets putchar
+ * Returan - always 0
  */
+
 int main(void)
 {
 	_putchar('_');
