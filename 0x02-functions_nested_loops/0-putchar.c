@@ -1,8 +1,8 @@
 #include "main.h"
 /**
- * main - Entry point
- * _putchar print alphabets putchar
- * Returan - always 0
+ * main - check the code
+ * _putchar - print the alphabet putchar
+ * Return: Always 0.
  */
 
 int main(void)
@@ -16,5 +16,6 @@ int main(void)
 	_putchar('a');
 	_putchar('r');
 	_putchar('\n');
+	/* return putchar */
 	return (0);
 }
