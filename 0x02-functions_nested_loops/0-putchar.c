@@ -1,8 +1,7 @@
-#include <stdio.h>
-#include <main.h>
+#include "main.h"
 /**
- * main - Entry point
- * success - return (0) if program runs well
+ * main - putchar  Entry point
+ * print alphabet - return (0) if program runs well
  */
 int main(void)
 {
@@ -14,6 +13,6 @@ int main(void)
 	_putchar('h');
 	_putchar('a');
 	_putchar('r');
-
+	_putchar('\n');
 	return (0);
 }
