@@ -36,4 +36,3 @@ void print_number(int n)
 	}
 	_putchar(res % 10 + '0');
 }
-
