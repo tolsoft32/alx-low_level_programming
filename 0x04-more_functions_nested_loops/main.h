@@ -3,5 +3,6 @@
 
 int _isupper();
 int _isdigit();
+int mul(int a, int b);
 
 #endif /* ending main.h */
