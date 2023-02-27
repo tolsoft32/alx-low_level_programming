@@ -1,14 +1,14 @@
 #include "main.h"
 
 /**
- * rev_string - Reverse a string
- * @s: String to be modified
- *
- * Return: void
- */
+  * rev_string - Reverses a string
+  * @s: The string to be modified
+  *
+  * Return: void
+  */
 void rev_string(char *s)
 {
-	int i, c, j;
+	int i, c, k;
 	char *a, aux;
 
 	a = s;
@@ -17,7 +17,8 @@ void rev_string(char *s)
 	{
 		c++;
 	}
-	for (j = 1; j < c; j++)
+
+	for (k = 1; k < c; k++)
 	{
 		a++;
 	}
