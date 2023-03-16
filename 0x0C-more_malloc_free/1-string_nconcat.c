@@ -1,43 +1,42 @@
-#include "main.h"
-#include <stdlib.h>
+#include "holberton.h"
 #include <stdio.h>
-
+#include <stdlib.h>
 /**
- * string_nconcat - declaring cocatenation of two strings
- * @s1: string one
- * @s2: string two for cocatenation
- * @n: numbers or length of times strings access memory
- * Return: if the function fail, otherwise a pointer to return
+ *string_nconcat - a function that concatenates two strings.
+ *@s1: destination string .
+ *@s2: string to be concatenated
+ *@n: number of bytes to copied
+ *Return: char pointer to the allocated memory
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	char *concat;
-
-	usigned int length = n, index;
-
+	char *s;
+	unsigned int i, size1 = 0, size2 = 0;
+/*checking if the 2 strings are empty */
 	if (s1 == NULL)
 		s1 = "";
-
 	if (s2 == NULL)
 		s2 = "";
 
-	for (index = 0; s1[index]; index++)
-		length++;
+/* calculating the length of both strings */
+	while (*(s1 + size1) != '\0')
+		size1++;
+	while (*(s2 + size2) != '\0')
+		size2++;
 
-	concat = malloc(sizeof(char) * (length + 1));
+	if (size2 >= n)
+		size2 = n;
+/* allocating the needed memory for the 2 strings*/
+	s = malloc(size1 + n + 1);
+	if (s == NULL)
+		return (s);
+/* copying the first string to the allacoted memory */
+	for (i = 0; i < size1; i++)
+		s[i] = s1[i];
 
-	if (concat == NULL)
-		return (NULL);
+	for (i = 0; i < n; i++)
+		s[i + size1] = s2[i];
 
-	length = 0;
-
-	for (index = 0; s1[index]; index++)
-		concat[length++] = s1[index];
-
-	for (index = 0; s2[index] && index < n; index++)
-		concat[length++] = s2[index];
-
-	concat[length] = '\0';
-
-	return (concat);
+	s[size1 + i] = '\0';
+	return (s);
 }
