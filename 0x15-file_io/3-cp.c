@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stdio.h>
-#include <stdlib.h>
 #include <unistd.h>
+#include <stdlib.h>
 
 /**
  * _error - entry point for the program
