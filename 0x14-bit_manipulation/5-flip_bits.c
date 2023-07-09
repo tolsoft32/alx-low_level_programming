@@ -10,14 +10,13 @@
  */
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
+	unsigned long int xor_res = n ^ m;
 	unsigned int count = 0;
 
-	while (n != 0 || m != 0)
+	while (xor_res != 0)
 	{
-		if ((n & 1) != (m & 1))
-			count++;
-		m = m >> 1;
-		n = n >> 1;
+		count += xor_res & 1;
+		xor_res >>= 1;
 	}
 
 	return (count);
