@@ -10,6 +10,7 @@
 int main(int argc, char *argv[])
 {
 	int f_from, f_to, size;
+	char buf[1024];
 
 	if (argc != 3)
 	{
