@@ -13,5 +13,6 @@ int main(int argc, char *argv[])
 
 	for (int i = 0; i < argc; i++)
 		printf("Argument %d\n: %s\n", i, argv[i]);
-	return (1);
+
+	return 1;
 }

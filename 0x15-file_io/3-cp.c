@@ -14,23 +14,23 @@ int main(int argc, char *argv[])
 
 	if (argc != 3)
 	{
-		dprintf(STDERR_FILENO, "usage: cp f_from f_to\n"), exit(97);
+		dprintf(STDERR_FILENO, "usage: cp file_from file_to\n"), exit(97);
 	}
 
 	f_from = open(argv[1], O_RDONLY, 0);
 	if (f_from == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: can't read from %s\n", argv[1]);
+		dprintf(STDERR_FILENO, "Error: can't read from file %s\n", argv[1]);
 		exit(98);
 	}
 
-	f_to = open(argv[2], O_CREAT | O_TRUNC | O_RDONLY, 0664);
-	if (f_to == -1)
+	f_to = open(argv[2], O_CREAT | O_TRUNC | O_WRONLY, 0664);
+	if (f_to == 1)
 	{
 		dprintf(STDERR_FILENO, "Error: can't write to %s\n", argv[2]), exit(99);
 	}
 
-	while ((size = read(f_from, buf, 1024)) >> 0)
+	while ((size = read(f_from, buf, 1024)) > 0)
 	{
 		if (write(f_to, buf, size) != size)
 		{
