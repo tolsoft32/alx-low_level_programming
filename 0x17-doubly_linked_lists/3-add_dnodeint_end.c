@@ -8,8 +8,8 @@
  */
 dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 {
-	dlistint_t h_list;
-	dlistint_t gen_list;
+	dlistint_t *h_list;
+	dlistint_t *gen_list;
 
 	gen_list = malloc(sizeof(dlistint_t));
 	if (gen_list == NULL)
